@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Skityashin Vladimir
  * @version 1.0
- * @since 10.02.16
+ * @since 18.01.17
  */
 
 @Repository
@@ -34,25 +34,22 @@ public class AuthorRepositoryImpl implements AuthorRepository{
 
     @Override
     public Author findByName(String name) {
-        ///
-        return null;
+        return hibernateTemplate.get(Author.class, name);
     }
 
     @Override
     public List<Author> getAllAuthor() {
-        ///
-        return null;
+        return (List<Author>) hibernateTemplate.find("select * FROM Author");
     }
 
     @Override
     public void deleteByName(String name) {
-        ///
-
+        hibernateTemplate.delete(findByName(name));
     }
 
     @Override
     public boolean isAuthorExist(String name) {
-        ///
+        hibernateTemplate.contains(name);
         return false;
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Skityashin Vladimir
  * @version 1.0
- * @since 10.02.16
+ * @since 18.01.17
  */
 
 @Service
@@ -33,25 +33,21 @@ public class AuthorServiceImpl implements AuthorService{
 
     @Override
     public Author findByName(String name) {
-        ///
-        return null;
+        return authorRepository.findByName(name);
     }
 
     @Override
     public List<Author> getAllAuthor() {
-        ///
-        return null;
+        return authorRepository.getAllAuthor();
     }
 
     @Override
     public void deleteByName(String name) {
-        ///
-
+        authorRepository.deleteByName(name);
     }
 
     @Override
     public boolean isAuthorExist(String name) {
-        ///
-        return false;
+        return authorRepository.isAuthorExist(name);
     }
 }

@@ -13,8 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -69,7 +67,7 @@ public class BooksController {
     }
 
     @RequestMapping(value = "/find/{name}", method = RequestMethod.GET)
-    public String findProduct(@PathVariable String name, Model model) {
+    public String findBooks(@PathVariable String name, Model model) {
         Books books = booksService.findByTitle(name);
         model.addAttribute("title", books.getTitle());
         model.addAttribute("id_books", books.getId_books());

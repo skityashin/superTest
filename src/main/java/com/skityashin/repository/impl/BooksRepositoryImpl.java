@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Skityashin Vladimir
  * @version 1.0
- * @since 10.02.16
+ * @since 18.01.17
  */
 
 @Repository
@@ -31,25 +31,21 @@ public class BooksRepositoryImpl implements BooksRepository {
 
     @Override
     public Books findByTitle(String title) {
-        ///
-        return null;
+        return hibernateTemplate.get(Books.class, title);
     }
 
     @Override
     public List<Books> getAllBooks() {
-        ///
-        return null;
+        return (List<Books>) hibernateTemplate.find("select * FROM Books");
     }
 
     @Override
     public void deleteByTitle(String title) {
-        ///
-
+        hibernateTemplate.delete(findByTitle(title));
     }
 
     @Override
     public boolean isBooksExist(String title) {
-        ///
-        return false;
+        return hibernateTemplate.contains(title);
     }
 }

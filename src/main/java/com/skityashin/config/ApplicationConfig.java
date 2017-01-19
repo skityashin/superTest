@@ -20,7 +20,7 @@ import java.util.concurrent.ScheduledExecutorService;
  *
  * @author Skityashin Vladimir
  * @version 1.0
- * @since 10.02.16
+ * @since 18.01.17
  */
 
 @Configuration

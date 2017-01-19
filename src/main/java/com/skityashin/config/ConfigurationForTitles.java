@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 *
 * @author Skityashin Vladimir
 * @version 1.0
-* @since 10.02.16
+* @since 18.01.17
 */
 
 @Configuration

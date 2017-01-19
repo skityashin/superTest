@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Skityashin Vladimir
  * @version 1.0
- * @since 10.02.16
+ * @since 18.01.17
  */
 
 @Service
@@ -33,25 +33,21 @@ public class BooksServiceImpl implements BooksService {
 
     @Override
     public Books findByTitle(String title) {
-        ///
-        return null;
+        return booksRepository.findByTitle(title);
     }
 
     @Override
     public List<Books> getAllBooks() {
-        ///
-        return null;
+        return booksRepository.getAllBooks();
     }
 
     @Override
     public void deleteByTitle(String title) {
-        ///
-
+        booksRepository.deleteByTitle(title);
     }
 
     @Override
     public boolean isBooksExist(String title) {
-        ///
-        return false;
+        return booksRepository.isBooksExist(title);
     }
 }

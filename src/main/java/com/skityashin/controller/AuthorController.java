@@ -48,7 +48,7 @@ public class AuthorController {
 
     @RequestMapping(value = "/find/{name}", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity findCategory(@PathVariable String name) {
+    public ResponseEntity findAuthor(@PathVariable String name) {
         Author author = authorService.findByName(name);
         if (author == null) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
@@ -57,7 +57,7 @@ public class AuthorController {
     }
 
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)
-    public ResponseEntity getAllProducts() {
+    public ResponseEntity getAllAuthor() {
         List<Author> authors = authorService.getAllAuthor();
         if (CollectionUtils.isEmpty(authors)) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);

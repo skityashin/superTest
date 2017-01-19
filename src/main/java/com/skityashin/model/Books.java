@@ -25,7 +25,6 @@ public class Books {
     public Books() {
     }
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_books", nullable = false)

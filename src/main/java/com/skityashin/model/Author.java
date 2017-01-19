@@ -24,7 +24,6 @@ public class Author {
     public Author() {
     }
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_author", nullable = false)

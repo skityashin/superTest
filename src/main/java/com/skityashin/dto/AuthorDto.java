@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.skityashin.model.Books;
 
-
 /**
  * Class {@link AuthorDto}
  *

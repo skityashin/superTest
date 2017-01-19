@@ -1,5 +1,6 @@
 package com.skityashin.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
@@ -28,7 +29,7 @@ public class ConfigurationForTitles {
         TilesConfigurer configurer = new TilesConfigurer();
         configurer.setUseMutableTilesContainer(true);
 
-        configurer.setDefinitions(new String[]{"/WEB-INF/views/tiles.xml"});
+        configurer.setDefinitions("/WEB-INF/views/tiles.xml");
         configurer.setCheckRefresh(true);
         return configurer;
     }

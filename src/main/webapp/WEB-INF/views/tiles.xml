@@ -4,23 +4,24 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-   <!-- Templates -->
+    <!-- Templates -->
 
-    <definition name="all_books" template="/WEB-INF/views/all_books.jsp">
+    <definition name="layout.basic" template="/WEB-INF/views/basic.jsp">
         <put-attribute name="title" value="Spring Web MVC with Tiles 3"/>
+        <!--<put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp"/>-->
         <put-attribute name="body" value=""/>
-
+        <!--<put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp"/>-->
     </definition>
 
     <!-- Pages -->
 
-    <definition name="create_books" extends="all_books">
-        <put-attribute name="body" value="/WEB-INF/views/create_books.jsp"/>
+    <definition name="create_author" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/views/create_author.jsp"/>
     </definition>
+    <!--<definition name="view" extends="layout.basic">-->
+        <!--<put-attribute name="body" value="/WEB-INF/views/view.jsp"/>-->
+    <!--</definition>-->
 
-    <definition name="one_books" extends="all_books">
-        <put-attribute name="body" value="/WEB-INF/views/one_books.jsp"/>
-    </definition>
 
 
 </tiles-definitions>

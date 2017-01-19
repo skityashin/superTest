@@ -15,9 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -37,7 +35,7 @@ public class AuthorController {
     @RequestMapping(method = RequestMethod.GET, value = "/create")
     public String showForm() {
         BasicConfigurator.configure();
-        return "create_books";
+        return "create_author";
     }
 
 
@@ -60,7 +58,7 @@ public class AuthorController {
         try {
             booksService.createBooks(books);
         } catch (Exception e) {
-            return "create_books"; //error
+            return "create_author"; //error
         }
 
         List<Books> booksList = author.getBooks();
